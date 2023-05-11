@@ -16,9 +16,9 @@ public class MemberDTO {
     private String memberName;
     private String memberMobile;
 
-    private int fileAttached;
+    private int memberProfile;
 
-    private MultipartFile memberProfile;
+    private MultipartFile profile;
 
 
 

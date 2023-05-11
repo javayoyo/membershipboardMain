@@ -16,7 +16,7 @@
 <%@include file="../component/header.jsp"%>
 <%@include file="../component/nav.jsp"%>
 <div id = "section">
-    <form action="/board/save" method="post" >
+    <form action="/board/save" method="post" name="saveForm" enctype="multipart/form-data">
         <input type="text" name="boardTitle" placeholder="제목을 입력하세요"> <br>
         <input type="text" name="boardWriter" placeholder="작성자를 입력하세요"> <br>
         <input type="text" name="boardPass" placeholder="비밀번호를 입력하세요"> <br>

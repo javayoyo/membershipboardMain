@@ -24,6 +24,13 @@
         <li>
             <a href="/board/list">글목록</a>
         </li>
+        <li class="write-name" id="write-area">
+
+        </li>
+
+        <li class="admin-name" id="admin-area">
+
+        </li>
 
 
         <li class="login-name" id="login-area">
@@ -37,18 +44,27 @@
 
 <script>
     const loginArea = document.getElementById("login-area");
+    const adminArea = document.getElementById("admin-area");
+    const writeArea = document.getElementById("write-area");
+
     const loginEmail = '${sessionScope.loginEmail}';
     console.log(loginEmail.length);
 
-    if(loginEmail.length != 0) {
+
+    if(loginEmail == "admin") {
+        adminArea.innerHTML = "<a href='/member/list'>회원목록</a>"+
+            "<a href='/member/logout'>logout</a>";
+    }
+    else if(loginEmail.length != 0) {
+
+        writeArea.innerHTML = "<a href='/board/save'>글작성</a>";
         loginArea.innerHTML = "<a href='/member/mypage' style='color:black;'>"+loginEmail + "님 마이페이지</a>"+
             "<a href='/member/logout'>logout</a>";
 
     } else {
-
         loginArea.innerHTML = "<a href='/member/login'>login</a>";
-
-
     }
+
+
 
 </script>

@@ -6,7 +6,7 @@
 <mapper namespace="Member">
 
     <insert id="save" parameterType="member" useGeneratedKeys="true" keyProperty="id">
-        insert into member_table(memberEmail, memberPassword, memberName, memberMobile,memberProfile)
+        insert into member_table(memberEmail, memberPassword, memberName, memberMobile,memberProfile )
         values (#{memberEmail},#{memberPassword},#{memberName},#{memberMobile},#{memberProfile})
     </insert>
 
@@ -27,6 +27,14 @@
 
     <select id="update" parameterType="member">
         update member_table set memberName=#{memberName},memberMobile=#{memberMobile}  where id = #{id}
+    </select>
+
+    <delete id="delete" parameterType="Long">
+        delete from member_table where id = #{id}
+    </delete>
+
+    <select id="findAll" resultType="member">
+        select * from member_table
     </select>
 
 

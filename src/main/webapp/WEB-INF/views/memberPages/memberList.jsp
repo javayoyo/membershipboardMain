@@ -45,8 +45,9 @@
 </body>
 <script>
 
-    const member_delete = (id) => {
-        location.href = "/delete?id=" + id;
+    const member_delete = () => {
+
+        location.href = "/member/delete";
     }
 </script>
 </html>

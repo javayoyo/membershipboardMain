@@ -28,7 +28,7 @@
         <p id="name-check-result"></p>
         <input type="text" name="memberMobile" placeholder="전화번호를 입력하세요" id="member-mobile" onblur="mobile_check()"> <br>
         <p id="mobile-check-result"></p>
-        <input type="file" name="boardFile"> <br>
+        <input type="file" name="memberProfile"> <br>
         <input type="button" value="회원가입" onclick="save_check()">
     </form>
 </div>
@@ -87,9 +87,6 @@
         }else {
             result.innerHTML = "000-0000-0000 형식으로 입력해주세요.";
             result.style.color = "red";
-
-
-
 
 
         }
