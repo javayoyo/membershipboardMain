@@ -21,6 +21,8 @@
 #footer {
     background-color: cornflowerblue;
     padding: 20px;
+    text-align: center;
+
 }
 #nav ul {
     list-style-type: none;

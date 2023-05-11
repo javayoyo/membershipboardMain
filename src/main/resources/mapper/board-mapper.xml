@@ -5,6 +5,14 @@
 
 <mapper namespace="Board">
 
+
+
+
+
+    <select id="findAll" resultType="board">
+        select *from board_table
+    </select>
+
 </mapper>
 
 
